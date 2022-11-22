@@ -1,0 +1,51 @@
+.productList {
+    border: 1px solid #0b0607;
+    box-shadow: 1px 1px 1px #000000;
+    background-color: #590302; 
+    color: #e38e4d; 
+    padding: 20px 40px; 
+    opacity: 85%; 
+    margin: 40px 60px; 
+    font-family: 'Caveat', cursive;
+}
+
+.productButton { 
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly; 
+ 
+}
+
+button { 
+    background-color: #590302; 
+    padding: 10px; 
+    margin-top: 20px; 
+   
+   
+ 
+}
+
+.products { 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.product { 
+    display: flex; 
+    flex-flow: column wrap; 
+    align-items: center; 
+}
+
+
+
+img { 
+    height: 10rem;
+    width: 10rem;
+    margin: 1rem;
+    box-shadow: 1px 1px 1px #000000;
+    cursor: pointer;
+    filter: grayscale(50%);
+            -webkit-filter: grayscale(50%);
+}

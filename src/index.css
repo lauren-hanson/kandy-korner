@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Caveat', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url("https://lowelaw.com/wp-content/uploads/2022/05/st2.jpg") top center repeat-y;
+  background-size: 100%; 
+  color: #e38e4d; 
+
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

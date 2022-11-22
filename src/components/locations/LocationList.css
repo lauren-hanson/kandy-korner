@@ -1,0 +1,28 @@
+.locationList {
+    border: 1px solid #0b0607;
+    box-shadow: 1px 1px 1px #000000;
+    background-color: #590302; 
+    color: #e38e4d; 
+    padding: 20px 40px; 
+    opacity: 85%; 
+    margin: 30px 40px; 
+    font-family: 'Caveat', cursive;
+    
+}
+
+.header { 
+   text-decoration: underline; 
+}
+
+.locations { 
+    display: flex; 
+   
+
+}
+
+.location { 
+    border: 1px solid #e38e4d;
+    width: fit-content; 
+    margin: 20px; 
+    padding: 10px 20px; 
+}

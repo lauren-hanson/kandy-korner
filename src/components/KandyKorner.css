@@ -1,0 +1,41 @@
+/* Import the google web fonts you want to use */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+/*Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+  color: #e38e4d; ;
+  font-family: 'Caveat', cursive;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+
+body {
+    padding: 0 3rem;
+    font-family: 'Caveat', cursive;
+    font-size: 20px; 
+    
+}
+h1, h2, h3, h4, h5, h6 {
+  
+  font-family: 'Caveat';
+  letter-spacing: 2px;
+  color: #e38e4d; 
+}
+
+p {
+  font-family: 'Caveat';
+  margin-bottom: 1.5em;
+  color: #e38e4d; ; 
+}
+
+.title--main {
+  margin-block-end: 0;
+}
+
