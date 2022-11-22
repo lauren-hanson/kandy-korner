@@ -1,0 +1,30 @@
+.productForm { 
+    border: 1px solid #0b0607;
+    box-shadow: 1px 1px 1px #000000;
+    background-color: #590302; 
+    color: #e38e4d; 
+    padding: 20px 40px; 
+    opacity: 85%; 
+    margin: 30px 40px; 
+    font-family: 'Caveat', cursive;
+}
+
+.formHeader { 
+    text-decoration: underline; 
+}
+
+.productTypeRadio {
+    display: inline-flex; 
+
+}
+
+.saveButton { 
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly; 
+    background-color: #590302; 
+    padding: 20px; 
+    margin-top: 20px; 
+    font-size: 20px; 
+ 
+}

@@ -5,27 +5,30 @@ import { NewProductForm } from "../products/NewProductForm"
 import "./ApplicationViews.css"
 
 export const ApplicationViews = () => {
-	return( 
+	return (
 		<Routes>
-			<Route path="/" element={ 
+
+			<Route path="/" element={
 				<>
 					<div className="headerContainer">
 						<h1>Kandy Korner</h1>
 						<p>You Deserve A Sweet Treat Today.</p>
 					</div>
+
 					<Outlet />
 				</>
-			}>
+			} >
+				<Route path="home" element={ "/" }/>
+				<Route path="locations" element={<LocationList />} />
+				<Route path="products" element={<ProductList />} />
+				<Route path="products/addproduct" element={<NewProductForm />} />
 
-				<Route path="locations" element={ <LocationList /> } />
-				<Route path="products" element={ <ProductList /> } /> 
-				<Route path="addproducts" element={ <NewProductForm /> } /> 
-				
-				
+
+
 			</Route>
-		
+
 		</Routes>
 
-		)
+	)
 }
 

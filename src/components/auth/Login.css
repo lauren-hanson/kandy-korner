@@ -46,13 +46,14 @@ fieldset {
 }
 
 .form--login {
-    background-position-x: right;
+    background-position-x: center;
     z-index: 1;
     min-height: 25rem;
     min-width: 45rem;
-    background-color: hsla(0,0%,100%,0.40);
+    background-color: #590302;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
+    padding: 20px; 
 }
 
 .button--close {
