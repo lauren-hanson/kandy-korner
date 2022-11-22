@@ -1,0 +1,35 @@
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-family: 'Caveat', cursive;
+    font-size: 20px; 
+    color: #e38e4d; 
+    background-color: #590302;
+    padding: 1rem;
+    box-shadow: 1px 1px 1px #000000;
+    margin: 20px 60px; 
+}
+
+.navbar__item {
+    flex-basis: 20%;
+    list-style-type: none;
+    text-align: center; 
+    margin: auto; 
+}
+
+.navbar__link {
+    text-decoration: none;
+    color: #e38e4d;
+    font-size: 1.25rem;
+  }
+
+  .navbar__link:hover {
+    text-decoration: underline;
+  }
+  
+
+.navbar__logout {
+    margin-left: auto;
+}
+
