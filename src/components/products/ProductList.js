@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
+import { Product } from "./Product"
 import "./ProductList.css"
 import { useNavigate } from 'react-router-dom'
-//import { NewProductForm } from "../products/NewProductForm"
+
 
 
 export const ProductList = ({searchTermState}) => {
@@ -32,12 +33,12 @@ export const ProductList = ({searchTermState}) => {
         [searchTermState]
     )
 
+    
     useEffect(
         () => {
             fetch(`http://localhost:8088/products?_expand=productType&_sort=name`)
                 .then(response => response.json())
                 .then((productArray) => {
-
                     setProducts(productArray)
 
                 })
@@ -94,14 +95,12 @@ export const ProductList = ({searchTermState}) => {
                 <h2>Products</h2>
                 <article className="products">
                     {filteredProducts.map(
-                        product => {
-                            return <section className="product" key={`product--${product?.id}`}>
-                                <img src={product?.imageUrl} />
-                                <header>{product?.name}   ${product?.price}</header>
-                                <p>{product?.productType?.category}</p>
-
-                            </section>
-                        }
+                        product => 
+                            <Product 
+                                key={`product--${product.id}`}
+                                productObject={product} 
+                                /> 
+                        
                     )}
 
                 </article>
@@ -110,3 +109,4 @@ export const ProductList = ({searchTermState}) => {
         </>
     )
 }
+
