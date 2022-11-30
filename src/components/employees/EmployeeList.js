@@ -33,7 +33,7 @@ export const EmployeeList = () => {
                 }
             </article>
                 <div>
-                    <button onClick={() => navigate("/employees/newhire")}>Add New Employee</button>
+                    <button onClick={() => navigate("/employees/newHireForm")}>Add New Employee</button>
                 </div>
         </>
     )

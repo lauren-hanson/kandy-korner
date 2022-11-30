@@ -25,7 +25,7 @@ export const EmployeeViews = () => {
 				<Route path="products" element={<ProductList />} />
 				<Route path="products/addproduct" element={<NewProductForm />} />
 				<Route path="employees" element={< EmployeeList />} />
-				<Route path="employees/newhire" element={< NewEmployeeForm />} />
+				<Route path="employees/newHireForm" element={< NewEmployeeForm />} />
 
 
 
