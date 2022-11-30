@@ -1,34 +1,16 @@
-import { Outlet, Route, Routes } from "react-router-dom"
-import { LocationList } from "../locations/LocationList"
-import { ProductList } from "../products/ProductList"
-import { NewProductForm } from "../products/NewProductForm"
+import { EmployeeViews } from "./EmployeeViews"
+import { CustomerViews } from "./CustomerViews"
 import "./ApplicationViews.css"
 
 export const ApplicationViews = () => {
-	return (
-		<Routes>
+	
+	const localKandyUser = localStorage.getItem("kandy_user") 
+    const kandyUserObject = JSON.parse(localKandyUser)
 
-			<Route path="/" element={
-				<>
-					<div className="headerContainer">
-						<h1>Kandy Korner</h1>
-						<p>You Deserve A Sweet Treat Today.</p>
-					</div>
-
-					<Outlet />
-				</>
-			} >
-				<Route path="home" element={ "/" }/>
-				<Route path="locations" element={<LocationList />} />
-				<Route path="products" element={<ProductList />} />
-				<Route path="products/addproduct" element={<NewProductForm />} />
-
-
-
-			</Route>
-
-		</Routes>
-
-	)
+    if (kandyUserObject.staff) { 
+        return <EmployeeViews /> 
+    } else { 
+        return <CustomerViews /> 
+    }
 }
 

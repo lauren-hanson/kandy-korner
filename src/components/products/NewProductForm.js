@@ -6,10 +6,10 @@ import "./NewProductForm.css"
 export const NewProductForm = () => {
 
     const [newProduct, setNewProduct] = useState({
-        name: newProduct.name,
-        productTypeId: newProduct.productTypeId,
-        price: newProduct.price,
-        imageUrl: newProduct.imageUrl
+        name: "",
+        productTypeId: 0,
+        price: "",
+        imageUrl: ""
 
     })
 
