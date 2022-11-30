@@ -1,4 +1,5 @@
-.employees { 
+.employees, 
+.newHireForm  { 
     border: 1px solid #0b0607;
     box-shadow: 1px 1px 1px #000000;
     background-color: #590302; 
@@ -24,4 +25,18 @@
  
 button { 
     float: right; 
+}
+
+.newHireForm_header { 
+    text-decoration: underline; 
+}
+
+.newHireForm { 
+    display: flex; 
+    flex-flow: column wrap; 
+}
+
+.form-group { 
+    display: flex; 
+    flex-direction: row; 
 }
