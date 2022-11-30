@@ -25,6 +25,8 @@ export const CustomerViews = () => {
               
 				<Route path="products" element={<ProductList />} />
                 <Route path="findproduct" element={< ProductContainer />} />
+			
+			
                
 			</Route>
 
