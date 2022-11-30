@@ -20,7 +20,7 @@ export const CustomerNav = () => {
             </li>
 
             <li className="navbar__item active">
-                <Link className="navbar__link" to="/findcandy">Find Candy</Link>
+                <Link className="navbar__link" to="/findproduct">Find Candy</Link>
             </li>
 
             <li className="navbar__item navbar__logout">
