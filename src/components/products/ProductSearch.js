@@ -1,10 +1,23 @@
+import "./ProductSearch.css"
 
-
-export const ProductSearch = ({}) => { 
+export const ProductSearch = ({ setterFunction }) => {
 
     return (
-        <div>
-            <input type="text" placeholder="Find your favorite..."/>
-        </div>
+
+        <>
+            <div className="findProduct">
+                <label>What candy are you looking for?</label>
+                <input
+                    onChange={
+                        (changeEvent) => {
+                            setterFunction(changeEvent.target.value)
+                        }
+                    }
+                    type="text" placeholder="Enter search terms" />
+
+
+            </div>
+        </>
+
     )
 }

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 //import { NewProductForm } from "../products/NewProductForm"
 
 
-export const ProductList = () => {
+export const ProductList = ({searchTermState}) => {
     const [products, setProducts] = useState([])
     const [filteredProducts, setFilteredProducts] = useState([])
     const [topPriceProduct, setTopPriceProduct] = useState(false)
@@ -21,6 +21,16 @@ export const ProductList = () => {
     const sortFilteredProducts = [ ... filteredProducts].sort((a, b) => a.name > b.name ? 1 : -1)
     */
 
+    useEffect(
+        () => {
+            const searchedProducts = products.filter(product => {
+                return product.name.toLowerCase().startsWith(searchTermState.toLowerCase())
+            }
+            )
+            setFilteredProducts(searchedProducts)
+        },
+        [searchTermState]
+    )
 
     useEffect(
         () => {
