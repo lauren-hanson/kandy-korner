@@ -9,6 +9,7 @@ export const ProductList = ({searchTermState}) => {
     const [products, setProducts] = useState([])
     const [filteredProducts, setFilteredProducts] = useState([])
     const [topPriceProduct, setTopPriceProduct] = useState(false)
+    
 
 
     const kandyUser = localStorage.getItem("kandy_user")
@@ -68,6 +69,8 @@ export const ProductList = ({searchTermState}) => {
         [topPriceProduct]
     )
 
+   
+
     return (
         <>
 
@@ -99,6 +102,7 @@ export const ProductList = ({searchTermState}) => {
                             <Product 
                                 key={`product--${product.id}`}
                                 productObject={product} 
+                                
                                 /> 
                         
                     )}
