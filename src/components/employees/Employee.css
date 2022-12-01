@@ -16,6 +16,9 @@
 
 .employee { 
     padding: 20px; 
+    display: flex; 
+    flex-flow: column wrap; 
+
 }
 
 .link { 
@@ -39,4 +42,9 @@ button {
 .form-group { 
     display: flex; 
     flex-direction: row; 
+    justify-content: space-evenly; 
+}
+
+label { 
+    padding-right: 10px; 
 }
