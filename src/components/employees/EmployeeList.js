@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { Employee } from "./Employee"
 import { useNavigate } from 'react-router-dom'
 import "./Employee.css"
 
@@ -8,7 +7,6 @@ export const EmployeeList = () => {
 
     const [employees, setEmployees] = useState([])
 
-    const [employeeInfo, setEmployeeInfo] = useState([])
 
     const navigate = useNavigate()
 
@@ -21,6 +19,7 @@ export const EmployeeList = () => {
             .then((employeeArray) => {
                 setEmployees(employeeArray)
             })
+            .then(console.log(employees))
 
     }
 
@@ -31,42 +30,44 @@ export const EmployeeList = () => {
 
             getAllEmployees()
 
-            fetch('http://localhost:8088/employees?_expand=user&location&_expand=location')
+            fetch('http://localhost:8088/employees?_expand=location&_expand=user')
                 .then(response => response.json())
                 .then((employeeInfo) => {
-    
-                    setEmployeeInfo(employeeInfo)
+
+                    setEmployees(employeeInfo)
                 })
         },
         []
     )
 
 
-
     return (
         <>
+            
             <article className="employees">
+            <h2>Employees</h2>
                 {
-                    employeeInfo.map(employee => 
-                    <Employee key={`employee--${employee.id}`}
+                    employees.map(employee => {
+                        return <>
+                        <section className="employee"
+                            key={`employee--${employee.userId}`}>
+                            <div>Name: {employee?.user?.name}
+                            </div>
+                            <div>Email: {employee?.user?.email}</div>
+                            <div>Location: {employee?.location?.name}</div>
+                        </section>
+                        </>
+                    }
 
-                        // id, fullName, email are all props
-                        id={employee.id}
-                        name={employee?.user?.name}
-                        email={employee?.user?.email}
-                        location={employee.location}
-                        getAllEmployees={getAllEmployees}
-                        employees={employees}
-                   
-               
-                       
-                        
+                    )
 
-                    />)
 
                 }
+
             </article>
-           
+
+
+
             <div>
                 <button onClick={() => navigate("/employees/newHireForm")}>Add New Employee</button>
             </div>
