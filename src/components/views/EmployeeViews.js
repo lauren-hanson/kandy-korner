@@ -4,6 +4,8 @@ import { ProductList } from "../products/ProductList"
 import { NewProductForm } from "../products/NewProductForm"
 import { EmployeeList } from "../employees/EmployeeList"
 import { NewEmployeeForm } from "../employees/NewEmployeeForm"
+import { CustomerList } from "../customers/CustomerList"
+import { CustomerDetails } from "../customers/CustomerDetails"
 import "./ApplicationViews.css"
 
 export const EmployeeViews = () => {
@@ -20,12 +22,16 @@ export const EmployeeViews = () => {
 					<Outlet />
 				</>
 			} >
-				<Route path="home" element={ "/" }/>
+				<Route path="home" element={"/"} />
 				<Route path="locations" element={<LocationList />} />
 				<Route path="products" element={<ProductList />} />
 				<Route path="products/addproduct" element={<NewProductForm />} />
 				<Route path="employees" element={< EmployeeList />} />
 				<Route path="employees/newHireForm" element={< NewEmployeeForm />} />
+
+				<Route path="customers" element={< CustomerList />} />
+				<Route path="/customers/:customerId" element={<CustomerDetails/>}/>
+            
 
 
 
