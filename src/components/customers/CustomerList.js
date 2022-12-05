@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import {Customer } from "./Customer"
+import { Customer } from "./Customer"
 import "./Customer.css"
 
 export const CustomerList = () => {
@@ -7,8 +7,10 @@ export const CustomerList = () => {
     const [customers, setCustomers] = useState([])
 
     useEffect(
+
         () => {
-            fetch(`http://localhost:8088/users?isStaff=false`)
+
+            fetch(`http://localhost:8088/customers?&_expand=user`)
                 .then(response => response.json())
                 .then((customerArray) => {
                     setCustomers(customerArray)
@@ -18,19 +20,25 @@ export const CustomerList = () => {
     )
 
 
+
     return (
         <>
-            <article className="customers">
+            <div className="customerProfile">
                 <h2>Customers</h2>
-                {
-                    customers.map(customer => 
-                    <Customer key={`customer--${customer.id}`}
-                    id={customer.id}
-                    name={customer.name}
-                    email={customer.email}
-                    />
-                    )}
-            </article>
+                <article className="customers">
+                    {
+                        customers.map(customer =>
+                            <Customer key={`customer--${customer.id}`}
+                                id={customer.userId}
+                                name={customer?.user?.name}
+                                email={customer?.user?.email}
+                                loyaltyNumber={customer.loyaltyNumber}
+
+
+                            />
+                        )}
+                </article>
+            </div>
         </>
     )
 }
